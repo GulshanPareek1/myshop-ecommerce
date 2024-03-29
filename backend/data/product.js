@@ -1,6 +1,5 @@
 const products = [
 	{
-		_id: "1",
 		name: "Airpods Wireless Bluetooth Headphones",
 		image: "/images/airpods.jpg",
 		description:
@@ -13,7 +12,6 @@ const products = [
 		numReviews: 12,
 	},
 	{
-		_id: "2",
 		name: "Samsung Galaxy Watch",
 		image: "/images/galaxy-watch.jpg",
 		description:
@@ -26,7 +24,6 @@ const products = [
 		numReviews: 10,
 	},
 	{
-		_id: "3",
 		name: "Amazon Echo Dot",
 		image: "/images/echo-dot.jpg",
 		description:
@@ -39,7 +36,6 @@ const products = [
 		numReviews: 20,
 	},
 	{
-		_id: "4",
 		name: "Apple MacBook Pro",
 		image: "/images/macbook-pro.jpg",
 		description:
@@ -52,7 +48,6 @@ const products = [
 		numReviews: 15,
 	},
 	{
-		_id: "5",
 		name: "Sony PlayStation 5",
 		image: "/images/playstation-5.jpg",
 		description:
@@ -65,7 +60,6 @@ const products = [
 		numReviews: 25,
 	},
 	{
-		_id: "6",
 		name: "Google Pixel 5",
 		image: "/images/pixel-5.jpg",
 		description:
@@ -78,7 +72,6 @@ const products = [
 		numReviews: 18,
 	},
 	{
-		_id: "7",
 		name: "Amazon Echo",
 		image: "/images/alexa.jpg",
 		description:
@@ -91,7 +84,6 @@ const products = [
 		numReviews: 15,
 	},
 	{
-		_id: "8",
 		name: "Canon EOS Rebel T7",
 		image: "/images/camera.jpg",
 		description:
@@ -104,7 +96,6 @@ const products = [
 		numReviews: 20,
 	},
 	{
-		_id: "9",
 		name: "Logitech Wireless Mouse",
 		image: "/images/mouse.jpg",
 		description:
@@ -117,7 +108,6 @@ const products = [
 		numReviews: 10,
 	},
 	{
-		_id: "10",
 		name: "Samsung Galaxy S21",
 		image: "/images/phone.jpg",
 		description:
@@ -130,7 +120,6 @@ const products = [
 		numReviews: 25,
 	},
 	{
-		_id: "11",
 		name: "Sony PlayStation 5",
 		image: "/images/playstation.jpg",
 		description:
@@ -143,7 +132,6 @@ const products = [
 		numReviews: 30,
 	},
 	{
-		_id: "12",
 		name: "Dell UltraSharp Monitor",
 		image: "/images/screens.jpg",
 		description:
