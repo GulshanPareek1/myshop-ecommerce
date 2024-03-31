@@ -5,6 +5,8 @@ const connectDB = require("./config/db");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const productRoutes = require("./routes/productRoute");
 const userRoute = require("./routes/userRoute");
+const orderRoutes = require("./routes/orderRoutes");
+
 const cookieParser = require("cookie-parser");
 const port = process.env.PORT || 5000;
 
@@ -23,6 +25,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/products", productRoutes);
 app.use("/api/users", userRoute);
+app.use("/api/orders", orderRoutes);
 app.use(notFound);
 app.use(errorHandler);
 
