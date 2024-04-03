@@ -85,7 +85,7 @@ const createProduct = asyncHandler(async (req, res) => {
 //@access   Public
 
 const getProducts = async (req, res) => {
-	const pageSize = 6;
+	const pageSize = process.env.PAGINATION_LIMIT;
 	const page = Number(req.query.pageNumber) || 1;
 
 	const keyword = req.query.keyword
