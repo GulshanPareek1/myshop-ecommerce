@@ -84,18 +84,23 @@ const createProduct = asyncHandler(async (req, res) => {
 //@route  GET /api/products
 //@access   Public
 
-const getProducts = asyncHandler(async (req, res) => {
-	const pageSize = 4;
+const getProducts = async (req, res) => {
+	const pageSize = 6;
 	const page = Number(req.query.pageNumber) || 1;
-	const count = await Product.countDocuments();
 
-	const products = await Product.find({})
+	const keyword = req.query.keyword
+		? { name: { $regex: req.query.keyword, $options: "i" } }
+		: {};
+
+	const count = await Product.countDocuments({ ...keyword });
+
+	const products = await Product.find({ ...keyword })
 		.limit(pageSize)
 		.skip(pageSize * (page - 1));
 	const pages = Math.ceil(count / pageSize);
 
 	res.json({ products, page, pages });
-});
+};
 
 //@desc create a new review
 //@route  POST /api/products/:id/reviews
@@ -137,6 +142,15 @@ const createProductReview = asyncHandler(async (req, res) => {
 	}
 });
 
+//@desc Get top rated products
+//@route GET /api/products/top
+//@access Public
+const getTopProducts = asyncHandler(async (req, res) => {
+	const products = await Product.find({}).sort({ rating: -1 }).limit(3); // .findById(req.params.id) both are same
+
+	res.status(200).json(products);
+});
+
 module.exports = {
 	getProducts,
 	getProductById,
@@ -144,4 +158,5 @@ module.exports = {
 	updateProduct,
 	deleteProduct,
 	createProductReview,
+	getTopProducts,
 };
